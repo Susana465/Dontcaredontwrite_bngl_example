@@ -3,7 +3,7 @@ This is a repository which shows a simple model of A, B,C molecules that it help
 
 **Click on the link to:**
 
-- See the models by looking at the ode or ssa simulations [`ode_simple_dcdw.bngl`](ode_simple_dcdw.bngl)[`ssa_simple_dcdw.bngl`](ssa_simple_dcdw.bngl)
+- See the models by looking at the ode or ssa simulations [`ode_simple_dcdw.bngl`](ode_simple_dcdw.bngl),[`ssa_simple_dcdw.bngl`](ssa_simple_dcdw.bngl)
 
 - Run the models and look at results using the [`PyBNG.ipynb`](PyBNG.ipynb)
 
