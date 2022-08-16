@@ -1,0 +1,49 @@
+begin model
+
+begin parameters
+  A_i 150
+  B_i 150
+  C_i 100
+
+
+  kon 1e-2
+  koff 1e-3
+  k_P 1e1
+end parameters
+
+begin molecule types
+    A(a,T286~0~P)
+    B(b)
+    C()
+end molecule types
+
+begin compartments
+end compartments
+
+begin species
+    A(a,T286~0) A_i 
+    B(b) B_i
+    C() C_i
+end species
+
+
+begin reaction rules
+# A_free and B_free can resversbly bind to give AB complex:
+# Don't need to specify, if I'm not interested, status of phosphorylation for molecule A
+    A(a) + B(b) <-> A(a!1).B(b!1) kon, koff
+# If A is unphosphorylated, it can become phoshorylated by the presence of C:
+# Don't need to specify status of binding site 'a' (don't write, don't care)
+    A(T286~0) + C() -> A(T286~P) k_P
+
+end reaction rules
+
+begin observables
+  Molecules AB_complex A(a!1).B(b!1)
+  Molecules A_phosphorylated A(T286~P)
+  Molecules A A(a)
+  Molecules B B(b)
+  Molecules C C()
+end observables
+
+end model
+simulate({method=>"ssa",t_end=>10,n_steps=>100})
