@@ -1,5 +1,5 @@
 # Dontcaredontwrite example
-This is a repository which shows a simple model of A, B,C molecules that it helpful for understanding the "don't care, don't write" capacity of rule based modelling.
+This is a repository which shows a simple model of A, B,C molecules that is helpful for understanding the "don't care, don't write" capacity of rule based modelling.
 
 **Click on the link to:**
 
